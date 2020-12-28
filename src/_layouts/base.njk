@@ -28,15 +28,15 @@
 </head>
 <body class="text-gray-700 antialiased bg-white">
 
-  <section>
-    {% if layoutHero %}
-      {% include "blocks/heroes/" + layoutHero + ".njk" %}
-    {% else %}
-      {# {% include "components/basic-hero.njk" %} #}
-    {% endif %}
-  </section>
+  {% if layoutHero %}
+    {% include "blocks/heroes/" + layoutHero + ".njk" %}
+  {% endif %}
 
-  <div class="mt-12">
+  {% if layoutSectionMenu %}
+    {% include "blocks/section-menus/" + layoutSectionMenu + ".njk" %}
+  {% endif %}
+
+  <div class="mt-20">
     {{ content | safe }}
   </div>
 

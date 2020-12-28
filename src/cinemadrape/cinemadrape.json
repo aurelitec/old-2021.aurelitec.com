@@ -1,4 +1,5 @@
 {
   "navTopSection": "apps",
-  "layoutHero": "apps/cinemadrape"
+  "layoutHero": "apps/cinemadrape",
+  "layoutSectionMenu": "apps/cinemadrape"
 }
