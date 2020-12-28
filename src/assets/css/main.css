@@ -9,6 +9,14 @@
   .aur-container {
     @apply px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0 max-w-screen-lg mx-auto;
   }
+
+  .aur-btn {
+    @apply inline-block py-2 px-4 rounded;
+  }
+
+  .aur-btn-primary {
+    @apply border-2 border-white text-2xl leading-none bg-gradient-to-t from-gray-900 to-gray-600 hover:to-gray-700;
+  }
 }
 
 @layer utilities {

@@ -1,5 +1,11 @@
 
+const filters = require('./utils/filters.js');
+
 module.exports = function (eleventyConfig) {
+
+  // Filters & Shortcodes
+  filters(eleventyConfig);
+  // shortcodes(eleventyConfig);
 
   // Eleventy
   eleventyConfig.addPassthroughCopy('src/assets/styles/*.css');

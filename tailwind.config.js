@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: [
     '_site/**/*.html',
@@ -9,10 +11,16 @@ module.exports = {
         'aur-blue': '#1BADEA',
         'aur-blue-dark': '#384452',
       },
+      fontFamily: {
+        sans: ['Monda', ...defaultTheme.fontFamily.sans],
+        display: ['Dosis', ...defaultTheme.fontFamily.sans]
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundImage: ['hover'],
+    },
   },
   plugins: [
   ],

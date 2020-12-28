@@ -10,6 +10,9 @@
   <meta name="description" content="{{ seoDescription }}">
   <link rel="canonical" href="{{ site.url }}{{ canonicalUrl or page.url }}">
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Monda:wght@400;700&display=swap" rel="stylesheet">
+
   {# Tailwind & Site CSS #}
   <link href="/assets/css/main.css" rel="stylesheet">
 
@@ -25,7 +28,17 @@
 </head>
 <body class="text-gray-700 antialiased bg-white">
 
-  {{ content | safe }}
+  <section>
+    {% if layoutHero %}
+      {% include "blocks/heroes/" + layoutHero + ".njk" %}
+    {% else %}
+      {# {% include "components/basic-hero.njk" %} #}
+    {% endif %}
+  </section>
+
+  <div class="mt-12">
+    {{ content | safe }}
+  </div>
 
   {% include "blocks/footer/footer.njk" %}
 </body>
