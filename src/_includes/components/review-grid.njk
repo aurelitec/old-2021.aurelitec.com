@@ -1,10 +1,14 @@
-{% macro reviewGrid(reviews) %}
-  <dl class="grid grid-cols-2 gap-8">
-    {% for review in reviews %}
-      <div class="border rounded-xl p-8 bg-gray-100 shadow-sm">
-        <dt class="text-xl leading-6 font-medium text-gray-900">{{ review.title }}</dt>
-        <dd class="mt-6 text-xl leading-8 font-light text-gray-500">"{{ review.quote }}"</dd>
-      </div>
-    {% endfor %}
-  </dl>
+{% from "components/content-section.njk" import contentSection %}
+
+{% macro reviewGrid(heading, reviews) %}
+  {% call contentSection(heading) %}
+    <dl class="grid grid-cols-3 gap-12">
+      {% for review in reviews %}
+        <div class="">
+          <dt class="text-lg leading-6 font-medium text-gray-900">{{ review.title }}</dt>
+          <dd class="mt-2 text-gray-500">"{{ review.quote }}"</dd>
+        </div>
+      {% endfor %}
+    </dl>
+  {% endcall %}
 {% endmacro %}

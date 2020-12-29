@@ -4,6 +4,7 @@ seoDescription: CinemaDrape helps you focus on your current task, by instantly b
 ---
 
 {% from "components/feature-grid.njk" import featureGrid %}
+{% from "components/screenshot-grid.njk" import screenshotGrid %}
 {% from "components/review-grid.njk" import reviewGrid %}
 
 <div class="aur-container">
@@ -15,13 +16,22 @@ seoDescription: CinemaDrape helps you focus on your current task, by instantly b
     { icon: "heroicons-outline-pencil-alt", title: "Easy to Focus",     description: "Adding a new transparent focus area is like drawing a rectangle. And you can add as many focus areas as you need." },
     { icon: "heroicons-outline-cog",        title: "Easy to Customize", description: "You can easily move or resize the focus areas using the mouse or arrow keys, or change the drape color and opacity." }
   ]) }}
+
+  {{ screenshotGrid("Screenshots", [
+    { image: "/apps/cinemadrape/app-home/cinemadrape-focus-on-email.png", alt: "CinemaDrape - focus on email", description: "Focus while composing emails. Works with Gmail, Hotmail, Outlook, and all the rest."},
+    { image: "/apps/cinemadrape/app-home/cinemadrape-move-resize-focus.png", alt: "CinemaDrape - move or resize focus area", description: "Easily move or resize the focus area with your mouse, finger, or the arrow keys."},
+    { image: "/apps/cinemadrape/app-home/cinemadrape-custom-color-opacity-thumb.png", alt: "CinemaDrape - custom color and opacity", description: "Concentrate using your favorite color and opacity. If pitch black is not your thing."}
+  ]) }}
+
+  {{ reviewGrid("Reviews", [
+    { title: "Revision3", quote: "On today's Tekzilla Daily, learn how to use CinemaDrape to close out everything except your most important task." },
+    { title: "Web User", quote: "CinemaDrape forces you to give the job your full attention by hiding everything outside the main application." },
+    { title: "Mauro Donzelli", quote: "Very useful for those who do not want to waste precious time due to increasingly tempting distractions." }
+  ]) }}
 </div>
 
 {# <div class="mt-12 py-12 bg-aur-blue">
   <div class="aur-container">
-{{ reviewGrid([
-  { title: "Revision3", quote: "Need to focus without all those other windows distracting you? On today's Tekzilla Daily, Veronica shows you how to use CinemaDrape to close out everything except your most important task." },
-  { title: "Web User", quote: "Whether you're composing a document, watching a video or replying to an email, CinemaDrape forces you to give the job your full attention by hiding everything outside the main application." }
-]) }}
+
   </div>
 </div> #}

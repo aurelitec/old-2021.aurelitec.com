@@ -1,0 +1,14 @@
+{% from "components/content-section.njk" import contentSection %}
+
+{% macro screenshotGrid(heading, items) %}
+  {% call contentSection(heading) %}
+    <div class="grid grid-cols-3 gap-12">
+      {% for item in items %}
+        <figure>
+            <img class="p-1 w-48 h-48 border-2 border-aur-blue" src="{{ item.image | imgurl }}" alt="{{ item.alt }}">
+            <figcaption class="mt-4 text-gray-500">{{ item.description }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  {% endcall %}
+{% endmacro %}
