@@ -1,6 +1,6 @@
 {% macro sectionMenu(items) %}
-  <section class="mt-2 aur-container bg-aur-blue shadow-sm">
-    <div class="">
+  <section class="mt-2 bg-aur-blue shadow-sm">
+    <div class="aur-container">
       <nav class="grid grid-cols-5 divide-x-2 divide-white">
         {% for item in items %}
           <a class="py-4 text-lg text-center text-white {{ 'font-bold bg-white text-aur-blue' if item.url == page.url }}" href="{{ item.url }}">

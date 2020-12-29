@@ -1,16 +1,18 @@
-{% macro featureGrid(items) %}
-  <dl class="grid grid-cols-3 gap-12">
-    {% for item in items %}
-      <div>
-        {% if item.icon %}
-          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-aur-blue text-white">
-            {% set svgClasses = "h-6 w-6" %}
+{% from "components/content-section.njk" import contentSection %}
+
+{% macro featureGrid(heading, items) %}
+  {% call contentSection(heading) %}
+    <dl class="grid grid-cols-3 gap-12">
+      {% for item in items %}
+        <div>
+          {% if item.icon %}
+            {% set svgClasses = "h-12 w-12 text-aur-blue" %}
             {% include "assets/svg/" + item.icon + ".svg" %}
-          </div>
-        {% endif %}
-        <dt class="mt-4 text-lg leading-6 font-medium text-gray-900">{{ item.title }}</dt>
-        <dd class="mt-2">{{ item.description }}</dd>
-      </div>
-    {% endfor %}
-  </dl>
+          {% endif %}
+          <dt class="mt-4 text-lg leading-6 font-medium text-gray-900">{{ item.title }}</dt>
+          <dd class="mt-2 text-gray-500">{{ item.description }}</dd>
+        </div>
+      {% endfor %}
+    </dl>
+  {% endcall %}
 {% endmacro %}
